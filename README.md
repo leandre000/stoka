@@ -1,6 +1,6 @@
-# ☕ Stoka - Coffee Management System
+# ☕ Stoka - Inventory Management System
 
-A comprehensive, modern coffee management system built with Next.js, TypeScript, and Tailwind CSS. Stoka provides a complete solution for managing coffee businesses, from inventory tracking to customer management.
+A comprehensive, modern inventory management system built with Next.js, TypeScript, and Tailwind CSS. Stoka provides a complete solution for managing businesses, from inventory tracking to customer management.
 
 ## ✨ Features
 
@@ -141,7 +141,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## ☕ About Stoka
 
-Stoka is designed specifically for coffee businesses, providing a comprehensive management solution that combines modern technology with the warmth and tradition of coffee culture. Whether you're running a coffee shop, roastery, or coffee farm, Stoka helps you manage every aspect of your business efficiently.
+Stoka is designed for businesses of all types, providing a comprehensive inventory management solution that combines modern technology with intuitive design. Whether you're running a retail store, manufacturing facility, or any business with inventory needs, Stoka helps you manage every aspect of your business efficiently.
 
 ---
 

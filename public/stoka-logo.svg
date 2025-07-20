@@ -22,5 +22,5 @@
   <text x="60" y="35" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="url(#logoGradient)" filter="url(#shadow)">STOKA</text>
   
   <!-- Tagline -->
-  <text x="60" y="48" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B4513" opacity="0.7">Coffee Management System</text>
+  <text x="60" y="48" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B4513" opacity="0.7">Inventory Management System</text>
 </svg> 

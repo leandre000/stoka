@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Stoka",
-  description: "A comprehensive coffee management system for products and services",
+  description: "A comprehensive inventory management system for products and services",
 }
 
 export default function RootLayout({

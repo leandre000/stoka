@@ -74,7 +74,7 @@ export default function SignupPage() {
             <CardTitle className="text-4xl font-bold text-center bg-gradient-to-r from-coffee-800 to-amber-800 bg-clip-text text-transparent mb-6">Create Account</CardTitle>
           </div>
           <CardDescription className="text-center text-lg text-coffee-700 leading-relaxed mt-4">
-            Welcome to Stoka! Sign up to access your coffee management dashboard.
+            Welcome to Stoka! Sign up to access your inventory management dashboard.
           </CardDescription>
         </CardHeader>
         <CardContent className="pt-6 pb-10 px-6">

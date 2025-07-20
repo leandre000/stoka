@@ -88,7 +88,7 @@ export function AppSidebar() {
           </div>
           <div className="flex flex-col">
             <span className="text-xl font-bold bg-gradient-to-r from-amber-700 to-orange-700 bg-clip-text text-transparent">Stoka</span>
-            <span className="text-xs text-muted-foreground">Coffee Management</span>
+            <span className="text-xs text-muted-foreground">Inventory Management</span>
           </div>
         </div>
       </SidebarHeader>

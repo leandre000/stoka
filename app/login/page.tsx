@@ -20,7 +20,7 @@ export default function LoginPage() {
             <Package className="h-8 w-8 sm:h-7 sm:w-7 text-white" />
           </div>
           <h1 className="text-2xl font-bold bg-gradient-to-r from-amber-700 to-orange-700 bg-clip-text text-transparent">Sign in to Stoka</h1>
-          <p className="text-coffee-600 text-sm font-medium">Coffee Management System</p>
+          <p className="text-coffee-600 text-sm font-medium">Inventory Management System</p>
         </div>
         <form onSubmit={(e) => {
           e.preventDefault();
