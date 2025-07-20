@@ -10,7 +10,7 @@ import {
   MoreHorizontal, 
   Bot, 
   Crown, 
-  Coffee, 
+  Package2, 
   Car 
 } from "lucide-react"
 import Link from "next/link"

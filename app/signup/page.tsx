@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Link from "next/link";
-import { Package, Settings, Coffee, Car, ShoppingCart, Building2, MoreHorizontal } from "lucide-react";
+import { Package, Settings, Package2, Car, ShoppingCart, Building2, MoreHorizontal } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
 
 export default function SignupPage() {
@@ -16,7 +16,7 @@ export default function SignupPage() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [businessType, setBusinessType] = useState("product");
-  const [businessCategory, setBusinessCategory] = useState("coffee");
+  const [businessCategory, setBusinessCategory] = useState("inventory");
   const [customCategory, setCustomCategory] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
@@ -48,10 +48,10 @@ export default function SignupPage() {
   };
 
   const productCategories = [
-    { value: "coffee", label: "Coffee Management", icon: Coffee },
+    { value: "inventory", label: "Inventory Management", icon: Package2 },
     { value: "retail", label: "Retail Store", icon: ShoppingCart },
     { value: "manufacturing", label: "Manufacturing", icon: Building2 },
-    { value: "agriculture", label: "Agriculture", icon: Coffee },
+    { value: "agriculture", label: "Agriculture", icon: Package2 },
     { value: "other", label: "Other", icon: MoreHorizontal },
   ];
   const serviceCategories = [
@@ -64,16 +64,16 @@ export default function SignupPage() {
   const categories = businessType === "product" ? productCategories : serviceCategories;
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-coffee-50 to-amber-100 p-6">
-      <Card className="w-full max-w-lg p-12 shadow-2xl border border-coffee-100">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-inventory-50 to-amber-100 p-6">
+      <Card className="w-full max-w-lg p-12 shadow-2xl border border-inventory-100">
         <CardHeader className="space-y-6 pb-8">
           <div className="flex flex-col items-center justify-center gap-4">
-            <div className="w-24 h-24 bg-gradient-to-br from-coffee-600 to-amber-600 rounded-3xl flex items-center justify-center shadow-xl mb-2">
-              <Package className="h-12 w-12 text-white" />
+            <div className="w-28 h-28 bg-gradient-to-br from-inventory-600 to-amber-600 rounded-3xl flex items-center justify-center shadow-xl mb-3">
+              <Package className="h-14 w-14 text-white" />
             </div>
-            <CardTitle className="text-4xl font-bold text-center bg-gradient-to-r from-coffee-800 to-amber-800 bg-clip-text text-transparent mb-6">Create Account</CardTitle>
+            <CardTitle className="text-4xl font-bold text-center bg-gradient-to-r from-inventory-800 to-amber-800 bg-clip-text text-transparent mb-6">Create Account</CardTitle>
           </div>
-          <CardDescription className="text-center text-lg text-coffee-700 leading-relaxed mt-4">
+          <CardDescription className="text-center text-lg text-inventory-700 leading-relaxed mt-4">
             Welcome to Stoka! Sign up to access your inventory management dashboard.
           </CardDescription>
         </CardHeader>
@@ -208,7 +208,7 @@ export default function SignupPage() {
             </div>
             <Button
               type="submit"
-              className="w-full mt-6 py-5 text-lg font-semibold bg-gradient-to-r from-coffee-600 to-amber-600 hover:from-coffee-700 hover:to-amber-700 text-white transition-colors rounded-lg shadow-lg"
+              className="w-full mt-6 py-5 text-lg font-semibold bg-gradient-to-r from-inventory-600 to-amber-600 hover:from-inventory-700 hover:to-amber-700 text-white transition-colors rounded-lg shadow-lg"
               disabled={isLoading}
             >
               {isLoading ? "Creating account..." : "Create Account"}
@@ -216,7 +216,7 @@ export default function SignupPage() {
             <div className="mt-16 text-center">
               <p className="text-base text-gray-600">
                 Already have an account?{" "}
-                <Link href="/login" className="text-coffee-600 hover:text-coffee-500 font-medium">
+                <Link href="/login" className="text-inventory-600 hover:text-inventory-500 font-medium">
                   Sign in
                 </Link>
               </p>
@@ -234,7 +234,7 @@ export default function SignupPage() {
             <h2 className="text-2xl font-bold text-green-700 mb-2">Account Created!</h2>
             <p className="text-gray-700 text-center mb-6">Your account has been created successfully.<br />You will be redirected to your portal.</p>
             <Button
-              className="w-full bg-gradient-to-r from-coffee-600 to-amber-600 hover:from-coffee-700 hover:to-amber-700 text-white text-lg font-semibold py-3 rounded-xl shadow"
+              className="w-full bg-gradient-to-r from-inventory-600 to-amber-600 hover:from-inventory-700 hover:to-amber-700 text-white text-lg font-semibold py-3 rounded-xl shadow"
               onClick={() => {
                 setShowSuccess(false);
                 window.location.href = businessType === "service" ? "/service" : "/product";

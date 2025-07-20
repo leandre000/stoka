@@ -1,6 +1,6 @@
 "use client"
 
-import { Building2, FileText, Home, Package, Settings, Truck, Users, Wallet, MoreHorizontal, Crown, Bot, Coffee } from "lucide-react"
+import { Building2, FileText, Home, Package, Settings, Truck, Users, Wallet, MoreHorizontal, Crown, Bot, Package2 } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import React, { useState } from "react"
@@ -84,7 +84,7 @@ export function AppSidebar() {
       <SidebarHeader className="p-4 border-b border-sidebar-border dark:border-sidebar-border bg-sidebar dark:bg-sidebar">
         <div className="flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-amber-600 to-orange-600 shadow-lg">
-            <Coffee className="h-5 w-5 text-white" />
+            <Package2 className="h-5 w-5 text-white" />
           </div>
           <div className="flex flex-col">
             <span className="text-xl font-bold bg-gradient-to-r from-amber-700 to-orange-700 bg-clip-text text-transparent">Stoka</span>

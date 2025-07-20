@@ -96,9 +96,9 @@ export default function ServicePortal() {
   };
 
   return (
-    <div className="flex-1 space-y-3 py-2 pr-4 md:pr-8 lg:pr-12 xl:pr-16">
+    <div className="flex-1 space-y-3 py-2 px-4 md:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center space-x-4 flex-1 max-w-md">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
@@ -106,7 +106,7 @@ export default function ServicePortal() {
             </div>
           </div>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button variant="ghost" size="icon" className="relative" aria-label="View notifications" tabIndex={0}>
@@ -179,15 +179,15 @@ export default function ServicePortal() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6">
           {/* Main Content */}
-          <div className="lg:col-span-3 space-y-6">
+          <div className="lg:col-span-3 space-y-4 lg:space-y-6">
             {/* Welcome Banner */}
-            <Card className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h1 className="text-2xl font-bold mb-2">
+            <Card className="bg-gradient-to-r from-inventory-600 to-amber-600 text-white">
+              <CardContent className="p-4 sm:p-6">
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                  <div className="flex-1">
+                    <h1 className="text-xl sm:text-2xl font-bold mb-2">
                       {isCustomCategory && !editingCategory ? (
                         <>
                           Welcome to <span className="inline-block px-2 py-1 rounded bg-white/10 text-yellow-200 font-semibold">{businessCategory}</span> Service System!
@@ -201,43 +201,45 @@ export default function ServicePortal() {
                           </Button>
                         </>
                       ) : editingCategory ? (
-                        <div className="flex items-center gap-2">
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
                           <Input
                             value={customCategory}
                             onChange={e => setCustomCategory(e.target.value)}
-                            className="w-auto px-2 py-1 text-black dark:text-white bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded"
+                            className="w-full sm:w-auto px-2 py-1 text-black dark:text-white bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded"
                             placeholder="Your service name"
                             autoFocus
                           />
-                          <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white px-3 py-1" onClick={handleCustomCategorySave}>Save</Button>
-                          <Button size="sm" variant="ghost" className="text-white px-2 py-1" onClick={() => setEditingCategory(false)}>Cancel</Button>
+                          <div className="flex gap-2">
+                            <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white px-3 py-1" onClick={handleCustomCategorySave}>Save</Button>
+                            <Button size="sm" variant="ghost" className="text-white px-2 py-1" onClick={() => setEditingCategory(false)}>Cancel</Button>
+                          </div>
                         </div>
                       ) : (
                         <>Welcome to {businessCategory === "garage" ? "Auto Garage Service System" : businessCategory === "consulting" ? "Consulting Service System" : businessCategory === "healthcare" ? "Healthcare Service System" : "Education Service System"}! </>
                       )}
                     </h1>
-                    <p className="text-blue-100 mb-4">
+                    <p className="text-inventory-100 mb-4">
                       {isCustomCategory ? (
                         <>Manage your <span className="font-semibold text-yellow-200">{businessCategory}</span> services and operations</>
                       ) : businessCategory === "garage" ? "Manage your automotive repair and maintenance services" : businessCategory === "consulting" ? "Manage your consulting services and client operations" : businessCategory === "healthcare" ? "Manage your healthcare services and patient care" : "Manage your educational services and training operations"}
                     </p>
-                    <div className="flex space-x-3">
-                      <Button className="bg-white text-blue-600 hover:bg-gray-100">
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Button className="bg-white text-inventory-600 hover:bg-gray-100">
                         <Plus className="h-4 w-4 mr-2" />
                         Add Service
                       </Button>
                       <Button
                         variant="outline"
-                        className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
+                        className="border-white text-white hover:bg-white hover:text-inventory-600 bg-transparent"
                         onClick={() => router.push('/service/reports')}
                       >
                         View Reports
                       </Button>
                     </div>
                   </div>
-                  <div className="hidden md:block">
-                    <div className="w-32 h-32 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                      <Settings className="w-16 h-16 text-blue-300" />
+                  <div className="hidden lg:block">
+                    <div className="w-24 h-24 lg:w-32 lg:h-32 bg-inventory-500/20 rounded-lg flex items-center justify-center">
+                      <Settings className="w-12 h-12 lg:w-16 lg:h-16 text-inventory-300" />
                     </div>
                   </div>
                 </div>

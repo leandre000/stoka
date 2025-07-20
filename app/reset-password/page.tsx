@@ -50,7 +50,7 @@ export default function ResetPasswordPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-inventory-50 to-amber-100 dark:from-gray-900 dark:to-gray-800 p-4">
       {/* Theme Toggler */}
       <div className="absolute top-4 right-4">
         <div className="flex items-center space-x-2 bg-white dark:bg-gray-800 rounded-lg p-2 shadow-lg">
@@ -84,8 +84,8 @@ export default function ResetPasswordPage() {
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
           <div className="flex items-center justify-center mb-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-              <Package className="h-8 w-8 text-white" />
+            <div className="w-20 h-20 bg-gradient-to-br from-inventory-600 to-amber-600 rounded-xl flex items-center justify-center shadow-lg">
+              <Package className="h-10 w-10 text-white" />
             </div>
           </div>
           <CardTitle className="text-2xl text-center">Reset Password</CardTitle>
@@ -156,7 +156,7 @@ export default function ResetPasswordPage() {
               
               <Button
                 type="submit"
-                className="w-full"
+                className="w-full bg-gradient-to-r from-inventory-600 to-amber-600 hover:from-inventory-700 hover:to-amber-700 text-white"
                 disabled={isLoading}
               >
                 {isLoading ? "Resetting..." : "Reset Password"}
@@ -182,7 +182,7 @@ export default function ResetPasswordPage() {
           <div className="mt-6 text-center">
             <Link 
               href="/login" 
-              className="text-sm text-blue-600 hover:text-blue-500 font-medium"
+              className="text-sm text-inventory-600 hover:text-inventory-500 font-medium"
             >
               Back to Sign In
             </Link>

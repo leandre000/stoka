@@ -20,7 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
+        <link rel="apple-touch-icon" href="/favicon.svg" sizes="180x180" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="32x32" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="16x16" />
+        <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+        <meta name="msapplication-TileColor" content="#8B4513" />
+        <meta name="theme-color" content="#8B4513" />
       </head>
       <body className={inter.className + " min-h-screen flex flex-col"}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

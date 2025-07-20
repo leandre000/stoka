@@ -13,14 +13,14 @@ export default function LoginPage() {
   const [portalType, setPortalType] = useState("product");
   const [isLoading, setIsLoading] = useState(false);
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-coffee-50 to-amber-100 px-2">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 space-y-6 border border-coffee-100">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-inventory-50 to-amber-100 px-2">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 space-y-6 border border-inventory-100">
         <div className="flex flex-col items-center mb-4">
-          <div className="h-14 w-14 sm:h-12 sm:w-12 rounded-xl bg-gradient-to-br from-coffee-600 to-amber-600 flex items-center justify-center mb-2 shadow-lg">
-            <Package className="h-8 w-8 sm:h-7 sm:w-7 text-white" />
+          <div className="h-16 w-16 sm:h-14 sm:w-14 rounded-xl bg-gradient-to-br from-inventory-600 to-amber-600 flex items-center justify-center mb-3 shadow-lg">
+            <Package className="h-9 w-9 sm:h-8 sm:w-8 text-white" />
           </div>
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-amber-700 to-orange-700 bg-clip-text text-transparent">Sign in to Stoka</h1>
-          <p className="text-coffee-600 text-sm font-medium">Inventory Management System</p>
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-inventory-700 to-amber-700 bg-clip-text text-transparent">Sign in to Stoka</h1>
+          <p className="text-inventory-600 text-sm font-medium">Inventory Management System</p>
         </div>
         <form onSubmit={(e) => {
           e.preventDefault();
@@ -75,13 +75,13 @@ export default function LoginPage() {
             </Select>
           </div>
           <div className="text-right">
-            <Link href="/forgot-password" className="text-xs text-coffee-600 hover:underline">
+            <Link href="/forgot-password" className="text-xs text-inventory-600 hover:underline">
               Forgot Password?
             </Link>
           </div>
           <Button
             type="submit"
-            className="w-full bg-gradient-to-r from-coffee-600 to-amber-600 hover:from-coffee-700 hover:to-amber-700 text-lg py-3 font-semibold shadow-lg"
+            className="w-full bg-gradient-to-r from-inventory-600 to-amber-600 hover:from-inventory-700 hover:to-amber-700 text-lg py-3 font-semibold shadow-lg"
             disabled={isLoading}
           >
             {isLoading ? "Signing in..." : "Sign In"}
@@ -89,7 +89,7 @@ export default function LoginPage() {
         </form>
         <div className="text-center text-sm text-gray-600">
           Don&apos;t have an account?{' '}
-          <Link href="/signup" className="text-coffee-600 hover:underline font-medium">Sign up</Link>
+          <Link href="/signup" className="text-inventory-600 hover:underline font-medium">Sign up</Link>
         </div>
       </div>
     </div>

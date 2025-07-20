@@ -4,7 +4,7 @@ A comprehensive, modern inventory management system built with Next.js, TypeScri
 
 ## ✨ Features
 
-- **Modern UI/UX**: Beautiful, responsive design with coffee-themed aesthetics
+- **Modern UI/UX**: Beautiful, responsive design with inventory-themed aesthetics
 - **Product Management**: Complete inventory tracking and management
 - **Service Management**: Service-based business operations
 - **Dashboard Analytics**: Real-time insights and reporting
@@ -26,13 +26,13 @@ A comprehensive, modern inventory management system built with Next.js, TypeScri
 
 ## 🎨 Design System
 
-Stoka features a modern coffee-inspired design system:
+Stoka features a modern inventory-inspired design system:
 
-- **Primary Colors**: Warm coffee browns and amber tones
+- **Primary Colors**: Warm inventory browns and amber tones
 - **Typography**: Inter font family for optimal readability
 - **Components**: Consistent, accessible UI components
-- **Gradients**: Beautiful coffee-themed gradients
-- **Icons**: Coffee bean and modern business icons
+- **Gradients**: Beautiful inventory-themed gradients
+- **Icons**: Package and modern business icons
 
 ## 📦 Installation
 
@@ -81,7 +81,7 @@ stoka/
 
 ## 🎯 Key Components
 
-- **Sidebar Navigation**: Modern sidebar with coffee-themed branding
+- **Sidebar Navigation**: Modern sidebar with inventory-themed branding
 - **Dashboard**: Comprehensive analytics and overview
 - **Product Management**: Inventory tracking and management
 - **Service Management**: Service operations and client management
@@ -91,10 +91,10 @@ stoka/
 ## 🎨 Customization
 
 ### Colors
-The system uses a coffee-themed color palette defined in `tailwind.config.ts`:
+The system uses an inventory-themed color palette defined in `tailwind.config.ts`:
 
 ```typescript
-coffee: {
+inventory: {
   '50': '#fef7f0',
   '100': '#fdecd8',
   '200': '#fbd5b0',
@@ -125,7 +125,7 @@ Stoka is fully responsive and optimized for:
 
 ## 🌙 Dark Mode
 
-The system supports both light and dark modes with coffee-themed color schemes for both themes.
+The system supports both light and dark modes with inventory-themed color schemes for both themes.
 
 ## 🤝 Contributing
 
@@ -145,4 +145,4 @@ Stoka is designed for businesses of all types, providing a comprehensive invento
 
 ---
 
-**Built with ☕ and ❤️ for the coffee community** 
+**Built with 📦 and ❤️ for the inventory management community** 

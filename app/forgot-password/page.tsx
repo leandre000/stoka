@@ -37,7 +37,7 @@ export default function ForgotPasswordPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-inventory-50 to-amber-100 dark:from-gray-900 dark:to-gray-800 p-4">
       {/* Theme Toggler */}
       <div className="absolute top-4 right-4">
         <div className="flex items-center space-x-2 bg-white dark:bg-gray-800 rounded-lg p-2 shadow-lg">
@@ -71,8 +71,8 @@ export default function ForgotPasswordPage() {
       <Card className="w-full max-w-lg p-8 shadow-2xl">
         <CardHeader className="space-y-2 pb-2">
           <div className="flex flex-col items-center justify-center mb-6">
-            <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg mb-3">
-              <Package className="h-10 w-10 text-white" />
+            <div className="w-24 h-24 bg-gradient-to-br from-inventory-600 to-amber-600 rounded-2xl flex items-center justify-center shadow-lg mb-3">
+              <Package className="h-12 w-12 text-white" />
             </div>
             <CardTitle className="text-3xl text-center mb-2">Forgot Password?</CardTitle>
           </div>
@@ -100,7 +100,7 @@ export default function ForgotPasswordPage() {
               </div>
               <Button
                 type="submit"
-                className="w-full py-4 text-lg mt-2"
+                className="w-full py-4 text-lg mt-2 bg-gradient-to-r from-inventory-600 to-amber-600 hover:from-inventory-700 hover:to-amber-700 text-white"
                 disabled={isLoading}
               >
                 {isLoading ? "Sending..." : "Send Reset Link"}
@@ -125,7 +125,7 @@ export default function ForgotPasswordPage() {
           <div className="mt-10 text-center">
             <Link 
               href="/login" 
-              className="inline-flex items-center text-base text-blue-600 hover:text-blue-500 font-medium"
+              className="inline-flex items-center text-base text-inventory-600 hover:text-inventory-500 font-medium"
             >
               <ArrowLeft className="h-5 w-5 mr-2" />
               Back to Sign In

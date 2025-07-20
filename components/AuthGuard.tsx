@@ -12,14 +12,14 @@ export function AuthGuard({ children }: { children: React.ReactNode }) {
   const [isAuth, setIsAuth] = useState(false);
   const [checked, setChecked] = useState(false);
   const [businessType, setBusinessType] = useState("product");
-  const [businessCategory, setBusinessCategory] = useState("coffee");
+  const [businessCategory, setBusinessCategory] = useState("inventory");
 
   // Check auth status on mount and when pathname changes
   const checkAuth = () => {
     if (typeof window !== "undefined") {
       const authStatus = localStorage.getItem("isAuth") === "true";
       const type = localStorage.getItem("businessType") || "product";
-      const category = localStorage.getItem("businessCategory") || "coffee";
+      const category = localStorage.getItem("businessCategory") || "inventory";
       setIsAuth(authStatus);
       setBusinessType(type);
       setBusinessCategory(category);

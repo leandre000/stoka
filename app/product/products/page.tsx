@@ -37,53 +37,53 @@ export default function ProductsPage() {
   const [products] = useState([
     {
       id: 1,
-      name: "Supreme Cherry Coffee",
-      description: "Premium quality coffee beans from high altitude regions",
-      category: "Coffee",
+          name: "Premium Electronics",
+    description: "High-quality electronic devices and accessories",
+    category: "Electronics",
       price: 25000,
       cost: 18000,
       sku: "COF-001",
       stock: 150,
-      supplier: "M. Byimana Coffee",
+      supplier: "Tech Solutions Inc.",
       image: "/placeholder.jpg",
       status: "In Stock"
     },
     {
       id: 2,
-      name: "Parchment Coffee",
-      description: "Semi-processed coffee beans ready for final processing",
-      category: "Coffee",
+      name: "Office Supplies",
+      description: "Essential office supplies and stationery items",
+      category: "Office Supplies",
       price: 18000,
       cost: 12000,
-      sku: "COF-002",
+      sku: "OFF-002",
       stock: 200,
-      supplier: "M. Byimana Coffee",
+      supplier: "Office Solutions Ltd.",
       image: "/placeholder.jpg",
       status: "In Stock"
     },
     {
       id: 3,
-      name: "Fully Washed Coffee",
-      description: "Fully processed and washed coffee beans",
-      category: "Coffee",
+      name: "Furniture Items",
+      description: "High-quality office and home furniture",
+      category: "Furniture",
       price: 32000,
       cost: 22000,
-      sku: "COF-003",
+      sku: "FUR-003",
       stock: 100,
-      supplier: "M. Byimana Coffee",
+      supplier: "Furniture World Inc.",
       image: "/placeholder.jpg",
       status: "Low Stock"
     },
     {
       id: 4,
-      name: "Coffee Processing Equipment",
-      description: "Industrial coffee processing machinery",
+      name: "Industrial Equipment",
+      description: "Heavy industrial machinery and equipment",
       category: "Equipment",
       price: 2500000,
       cost: 1800000,
       sku: "EQP-001",
       stock: 5,
-      supplier: "Coffee Equipment Co.",
+      supplier: "Industrial Equipment Co.",
       image: "/placeholder.jpg",
       status: "In Stock"
     }
@@ -218,7 +218,7 @@ export default function ProductsPage() {
                       <SelectValue placeholder="Select category" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Coffee">Coffee</SelectItem>
+                      <SelectItem value="Electronics">Electronics</SelectItem>
                       <SelectItem value="Equipment">Equipment</SelectItem>
                       <SelectItem value="Supplies">Supplies</SelectItem>
                       <SelectItem value="Packaging">Packaging</SelectItem>
@@ -389,7 +389,9 @@ export default function ProductsPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All Categories</SelectItem>
-                  <SelectItem value="Coffee">Coffee</SelectItem>
+                  <SelectItem value="Electronics">Electronics</SelectItem>
+                  <SelectItem value="Office Supplies">Office Supplies</SelectItem>
+                  <SelectItem value="Furniture">Furniture</SelectItem>
                   <SelectItem value="Equipment">Equipment</SelectItem>
                   <SelectItem value="Supplies">Supplies</SelectItem>
                   <SelectItem value="Packaging">Packaging</SelectItem>
@@ -498,7 +500,9 @@ export default function ProductsPage() {
                     <SelectValue placeholder="Select category" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="Coffee">Coffee</SelectItem>
+                    <SelectItem value="Electronics">Electronics</SelectItem>
+                    <SelectItem value="Office Supplies">Office Supplies</SelectItem>
+                    <SelectItem value="Furniture">Furniture</SelectItem>
                     <SelectItem value="Equipment">Equipment</SelectItem>
                     <SelectItem value="Supplies">Supplies</SelectItem>
                     <SelectItem value="Packaging">Packaging</SelectItem>

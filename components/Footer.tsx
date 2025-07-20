@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="w-full border-t border-border bg-background/80 dark:bg-background/90 text-foreground/80 dark:text-foreground/80 py-6 px-4 flex flex-col md:flex-row items-center justify-between gap-4 mt-auto shadow-inner z-20">
       <div className="flex items-center gap-2">
-        <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-amber-700 to-orange-700 bg-clip-text text-transparent">Stoka</span>
+        <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-inventory-700 to-amber-700 bg-clip-text text-transparent">Stoka</span>
         <span className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} All rights reserved.</span>
       </div>
       <div className="flex items-center gap-4 text-sm">
