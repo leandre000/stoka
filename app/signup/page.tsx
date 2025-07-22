@@ -64,7 +64,7 @@ export default function SignupPage() {
   const categories = businessType === "product" ? productCategories : serviceCategories;
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-inventory-50 to-amber-100 p-6 light">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-inventory-50 to-amber-100 px-2 light">
       <Card className="w-full max-w-lg p-12 shadow-2xl border border-inventory-100">
         <CardHeader className="space-y-6 pb-8">
           <div className="flex flex-col items-center justify-center gap-4">
