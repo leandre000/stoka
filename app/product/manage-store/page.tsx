@@ -49,7 +49,7 @@ website: "www.stoka.com",
           <h1 className="text-3xl font-bold">Manage Store</h1>
           <p className="text-gray-600">Configure your store settings and information</p>
         </div>
-        <Button className="bg-blue-600 hover:bg-blue-700">
+        <Button className="bg-inventory-600 hover:bg-inventory-700 text-white">
           <Save className="h-4 w-4 mr-2" />
           Save Changes
         </Button>

@@ -10,7 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
-import { Plus, Package, DollarSign, TrendingUp, Search, Filter, Edit, Trash2, Eye, ShoppingCart, Tag, Calendar } from "lucide-react"
+import { Plus, Package, DollarSign, TrendingUp, Search, Filter, Edit, Trash2, Eye, ShoppingCart, Tag, Calendar, Download } from "lucide-react"
 import { toast } from "sonner"
 
 
@@ -187,7 +187,7 @@ export default function ProductsPage() {
         </div>
         <Dialog open={showAddProduct} onOpenChange={setShowAddProduct}>
           <DialogTrigger asChild>
-            <Button className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700">
+            <Button className="bg-inventory-600 hover:bg-inventory-700 text-white">
               <Plus className="h-4 w-4 mr-2" />
               Add Product
             </Button>
@@ -398,7 +398,7 @@ export default function ProductsPage() {
                 </SelectContent>
               </Select>
             </div>
-            <Button variant="outline" className="bg-white dark:bg-gray-800 text-black dark:text-white border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+            <Button variant="outline" className="border-inventory-600 text-inventory-600 hover:bg-inventory-50">
               <Filter className="h-4 w-4 mr-2" />
               More Filters
             </Button>

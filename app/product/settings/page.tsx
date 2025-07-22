@@ -102,7 +102,7 @@ export default function ProductSettings() {
           <h1 className="text-3xl font-bold">Product Settings</h1>
           <p className="text-gray-600">Manage your product portal account and preferences</p>
         </div>
-        <Button className="bg-blue-600 hover:bg-blue-700" onClick={handleSaveAll}>
+        <Button className="bg-blue-600 hover:bg-blue-700 text-white" onClick={handleSaveAll}>
           <Save className="h-4 w-4 mr-2" />
           Save All Changes
         </Button>
