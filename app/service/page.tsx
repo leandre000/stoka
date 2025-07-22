@@ -48,6 +48,8 @@ export default function ServicePortal() {
     { name: "System Implementation", status: "In Progress", revenue: "$5,000" },
   ])
 
+  const [user, setUser] = useState({ email: '', avatar: '' });
+
   useEffect(() => {
     setMetricsLoading(true)
     const timer = setTimeout(() => setMetricsLoading(false), 1200)
@@ -58,6 +60,12 @@ export default function ServicePortal() {
     const category = localStorage.getItem("businessCategory") || "garage"
     setBusinessCategory(category)
   }, [])
+
+  useEffect(() => {
+    const email = localStorage.getItem('userEmail') || localStorage.getItem('email') || '';
+    const avatar = localStorage.getItem('userAvatar') || '';
+    setUser({ email, avatar });
+  }, []);
   
   const handleLogout = () => {
     localStorage.removeItem("isAuth")
@@ -99,11 +107,20 @@ export default function ServicePortal() {
   return (
     <div className="flex-1 space-y-3 pt-6 px-4 md:pl-[200px] md:pr-8 lg:pr-12">
       <DashboardHeader title="Service Dashboard">
-        <div className="flex items-center space-x-2 sm:space-x-4">
+        <div className="flex items-center space-x-2 sm:space-x-4 w-full">
           <div className="relative flex-1 hidden sm:block">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
             <Input placeholder="Search services..." className="pl-10 bg-gray-50 border-gray-200" aria-label="Search services" />
           </div>
+          {/* User info to the right of search bar */}
+          <div className="flex items-center space-x-2 ml-2">
+            <Avatar>
+              <AvatarImage src={user.avatar || "/placeholder-user.jpg"} />
+              <AvatarFallback>{user.email ? user.email[0].toUpperCase() : "U"}</AvatarFallback>
+            </Avatar>
+            <span className="font-medium text-sm truncate max-w-[120px]">{user.email ? user.email.split('@')[0] : "User"}</span>
+          </div>
+          {/* Notifications, theme, logout */}
           <Tooltip>
             <TooltipTrigger asChild>
               <Button variant="ghost" size="icon" className="relative" aria-label="View notifications" tabIndex={0}>
@@ -113,12 +130,6 @@ export default function ServicePortal() {
             </TooltipTrigger>
             <TooltipContent>View notifications</TooltipContent>
           </Tooltip>
-          <div className="flex items-center space-x-2">
-            <Avatar>
-              <AvatarImage src="/placeholder.svg?height=32&width=32" />
-              <AvatarFallback>RU</AvatarFallback>
-            </Avatar>
-          </div>
           <Tooltip>
             <TooltipTrigger asChild>
               <Button variant="ghost" size="icon" onClick={() => setTheme(theme === "dark" ? "light" : "dark") } aria-label="Toggle theme" tabIndex={0}>
@@ -144,6 +155,28 @@ export default function ServicePortal() {
           </Tooltip>
         </div>
       </DashboardHeader>
+      <AlertDialog open={showLogoutConfirm} onOpenChange={setShowLogoutConfirm}>
+        <AlertDialogContent className="sm:max-w-md">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="flex items-center gap-2">
+              <AlertTriangle className="h-5 w-5 text-red-500" />
+              Confirm Logout
+            </AlertDialogTitle>
+            <AlertDialogDescription>
+              Are you sure you want to logout? You will be redirected to the login page.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel className="border-inventory-600 text-inventory-600 hover:bg-inventory-50">Cancel</AlertDialogCancel>
+            <AlertDialogAction 
+              onClick={handleLogout}
+              className="bg-inventory-600 hover:bg-inventory-700 text-white"
+            >
+              Yes, Logout
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6">
           {/* Main Content */}
