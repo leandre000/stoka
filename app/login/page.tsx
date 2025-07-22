@@ -13,7 +13,7 @@ export default function LoginPage() {
   const [portalType, setPortalType] = useState("product");
   const [isLoading, setIsLoading] = useState(false);
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-inventory-50 to-amber-100 px-2">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-inventory-50 to-amber-100 px-2 light">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 space-y-6 border border-inventory-100">
         <div className="flex flex-col items-center mb-4">
           <div className="h-16 w-16 sm:h-14 sm:w-14 rounded-xl bg-gradient-to-br from-inventory-600 to-amber-600 flex items-center justify-center mb-3 shadow-lg">
@@ -91,6 +91,10 @@ export default function LoginPage() {
           Don&apos;t have an account?{' '}
           <Link href="/signup" className="text-inventory-600 hover:underline font-medium">Sign up</Link>
         </div>
+        <footer className="w-full border-t border-border bg-white text-foreground/80 py-4 px-2 flex flex-col items-center justify-center gap-2 mt-4 shadow-inner z-20">
+          <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-inventory-700 to-amber-700 bg-clip-text text-transparent">Stoka</span>
+          <span className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} All rights reserved.</span>
+        </footer>
       </div>
     </div>
   );

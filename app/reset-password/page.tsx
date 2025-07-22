@@ -50,7 +50,7 @@ export default function ResetPasswordPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-inventory-50 to-amber-100 dark:from-gray-900 dark:to-gray-800 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-inventory-50 to-amber-100 dark:from-gray-900 dark:to-gray-800 p-4 light">
       {/* Theme Toggler */}
       <div className="absolute top-4 right-4">
         <div className="flex items-center space-x-2 bg-white dark:bg-gray-800 rounded-lg p-2 shadow-lg">
@@ -188,6 +188,10 @@ export default function ResetPasswordPage() {
             </Link>
           </div>
         </CardContent>
+        <footer className="w-full border-t border-border bg-white text-foreground/80 py-4 px-2 flex flex-col items-center justify-center gap-2 mt-4 shadow-inner z-20">
+            <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-inventory-700 to-amber-700 bg-clip-text text-transparent">Stoka</span>
+            <span className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} All rights reserved.</span>
+          </footer>
       </Card>
     </div>
   )

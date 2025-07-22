@@ -64,7 +64,7 @@ export default function SignupPage() {
   const categories = businessType === "product" ? productCategories : serviceCategories;
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-inventory-50 to-amber-100 p-6">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-inventory-50 to-amber-100 p-6 light">
       <Card className="w-full max-w-lg p-12 shadow-2xl border border-inventory-100">
         <CardHeader className="space-y-6 pb-8">
           <div className="flex flex-col items-center justify-center gap-4">
@@ -222,6 +222,10 @@ export default function SignupPage() {
               </p>
             </div>
           </form>
+          <footer className="w-full border-t border-border bg-white text-foreground/80 py-4 px-2 flex flex-col items-center justify-center gap-2 mt-4 shadow-inner z-20">
+            <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-inventory-700 to-amber-700 bg-clip-text text-transparent">Stoka</span>
+            <span className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} All rights reserved.</span>
+          </footer>
         </CardContent>
       </Card>
       {/* Floating Modal Prompt */}

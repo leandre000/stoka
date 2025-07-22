@@ -81,7 +81,6 @@ export default function ProductReports() {
         <CardContent className="p-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <label className="text-sm font-medium">Report Period:</label>
               <Select value={selectedPeriod} onValueChange={setSelectedPeriod}>
                 <SelectTrigger className="w-40">
                   <SelectValue />

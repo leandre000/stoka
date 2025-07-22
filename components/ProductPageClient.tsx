@@ -20,6 +20,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
+import { DashboardHeader } from "@/components/DashboardHeader";
 
 export default function ProductPageClient() {
   const router = useRouter();
@@ -134,23 +135,18 @@ export default function ProductPageClient() {
   return (
     <AuthGuard>
       <TooltipProvider>
-        <div className="flex-1 space-y-3 py-2 px-4 md:px-6 lg:px-8">
-          {/* Header */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div className="flex items-center space-x-4 flex-1 max-w-md">
-              <div className="relative flex-1">
+        <div className="flex-1 space-y-3 pt-6 px-4 md:pl-[200px] md:pr-8 lg:pr-12">
+          <DashboardHeader title="Product Dashboard">
+            <div className="flex items-center space-x-2 sm:space-x-4">
+              <div className="relative flex-1 hidden sm:block">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
                 <Input placeholder="Search products..." className="pl-10 bg-gray-50 border-gray-200" aria-label="Search products" />
               </div>
-            </div>
-            <div className="flex items-center space-x-2 sm:space-x-4">
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Button variant="ghost" size="icon" className="relative" aria-label="View notifications" tabIndex={0}>
                     <Bell className="h-5 w-5" />
-                    <Badge className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center bg-blue-600">
-                      3
-                    </Badge>
+                    <Badge className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center bg-blue-600">3</Badge>
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>View notifications</TooltipContent>
@@ -160,7 +156,6 @@ export default function ProductPageClient() {
                   <AvatarImage src="/placeholder.svg?height=32&width=32" />
                   <AvatarFallback>RU</AvatarFallback>
                 </Avatar>
-                <span className="font-medium">Username</span>
               </div>
               <Tooltip>
                 <TooltipTrigger asChild>
@@ -185,33 +180,8 @@ export default function ProductPageClient() {
                 </TooltipTrigger>
                 <TooltipContent>Logout</TooltipContent>
               </Tooltip>
-              
-              <AlertDialog open={showLogoutConfirm} onOpenChange={setShowLogoutConfirm}>
-                <AlertDialogContent className="sm:max-w-md">
-                  <AlertDialogHeader>
-                    <AlertDialogTitle className="flex items-center gap-2">
-                      <AlertTriangle className="h-5 w-5 text-red-500" />
-                      Confirm Logout
-                    </AlertDialogTitle>
-                    <AlertDialogDescription>
-                      Are you sure you want to logout? You will be redirected to the login page.
-                    </AlertDialogDescription>
-                  </AlertDialogHeader>
-                  <AlertDialogFooter>
-                    <AlertDialogCancel className="bg-gray-100 hover:bg-gray-200 text-gray-700">
-                      Cancel
-                    </AlertDialogCancel>
-                    <AlertDialogAction 
-                      onClick={handleLogout}
-                      className="bg-red-600 hover:bg-red-700 text-white"
-                    >
-                      Yes, Logout
-                    </AlertDialogAction>
-                  </AlertDialogFooter>
-                </AlertDialogContent>
-              </AlertDialog>
             </div>
-          </div>
+          </DashboardHeader>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6">
             {/* Main Content */}
             <div className="lg:col-span-3 space-y-4 lg:space-y-6">
